@@ -3,7 +3,7 @@ package dev.PedroHS.mastersys.domain;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "modalidade")
+@Table(name = "modalidades")
 public class Modalidade {
 
     @Id
