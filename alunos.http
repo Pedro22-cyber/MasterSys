@@ -1,0 +1,88 @@
+@baseUrl = http://localhost:8080
+
+### Cadastrar aluno
+POST {{baseUrl}}/alunos
+Content-Type: application/json
+
+{
+  "nome": "João da Silva",
+  "dataNascimento": "1995-08-15",
+  "sexo": "M",
+  "telefone": "4833334444",
+  "celular": "48991645543",
+  "email": "joao@email.com",
+  "observacao": "Aluno iniciante",
+  "endereco": "Rua das Flores",
+  "numero": "123",
+  "complemento": "Apartamento 202",
+  "bairro": "Centro",
+  "cidade": "Criciuma",
+  "estado": "SC",
+  "cep": "88802410"
+}
+
+### Listar Alunos
+GET {{baseUrl}}/alunos
+
+### Listar alunos com paginação
+GET {{baseUrl}}/alunos?page=0&size=10&sort=nome,asc
+
+### Burcar aluno por ID
+GET {{baseUrl}}/aluno/1
+
+#### Atualizar aluno
+PUT {{baseUrl}}/alunos/1
+Content-Type: application/json
+
+{
+  "nome": "João da Silva atualizado",
+  "dataNascimento": "1995-08-15",
+  "sexo": "M",
+  "telefone": "4833334444",
+  "celular": "48991645543",
+  "email": "joao@email.com",
+  "observacao": "Aluno iniciante",
+  "endereco": "Rua das Flores",
+  "numero": "123",
+  "complemento": "Apartamento 202",
+  "bairro": "Centro",
+  "cidade": "Criciuma",
+  "estado": "SC",
+  "cep": "88802410"
+}
+
+### Excluir aluno
+DELETE {{baseUrl}}/alunos/1
+
+### Cadastrar aluno
+POST {{baseUrl}}/alunos
+Content-Type: application/json
+
+{
+  "nome": "Maria Oliveira",
+  "dataNascimento": "1998-03-22",
+  "sexo": "M",
+  "telefone": "4833334444",
+  "celular": "48991645543",
+  "email": "mariaoliveira@email.com",
+  "observacao": "Aluno iniciante",
+  "endereco": "Rua das Flores",
+  "numero": "123",
+  "complemento": "Apartamento 202",
+  "bairro": "Centro",
+  "cidade": "Criciuma",
+  "estado": "SC",
+  "cep": "88802410"
+}
+
+### Cadatrar um aluno invalido
+POST {{baseUrl}}/alunos
+Content-Type: application/json
+
+{
+  "nome": "",
+  "dataNascimento": "1998-03-22",
+  "sexo": "Masculino",
+  "email": "email-ivalido",
+  "estado": "Santa Catarina"
+}
