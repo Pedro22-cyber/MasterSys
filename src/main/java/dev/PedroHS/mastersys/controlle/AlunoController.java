@@ -1,5 +1,6 @@
 package dev.PedroHS.mastersys.controlle;
 
+import dev.PedroHS.mastersys.dto.AlunoFiltroRequest;
 import dev.PedroHS.mastersys.dto.AlunoRequest;
 import dev.PedroHS.mastersys.dto.AlunoResponse;
 import dev.PedroHS.mastersys.service.AlunoService;
@@ -26,8 +27,8 @@ public class AlunoController {
     }
 
     @GetMapping
-    public Page<AlunoResponse> listar(Pageable pageable){
-        return alunoService.listar(pageable);
+    public Page<AlunoResponse> listar(AlunoFiltroRequest filtro, Pageable pageable){
+        return alunoService.listar(filtro, pageable);
     }
 
     @GetMapping("{id}")

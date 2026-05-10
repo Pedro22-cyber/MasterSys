@@ -59,13 +59,13 @@ POST {{baseUrl}}/alunos
 Content-Type: application/json
 
 {
-  "nome": "Maria Oliveira",
+  "nome": "Vanessa Oliveira",
   "dataNascimento": "1998-03-22",
-  "sexo": "M",
+  "sexo": "F",
   "telefone": "4833334444",
   "celular": "48991645543",
-  "email": "mariaoliveira@email.com",
-  "observacao": "Aluno iniciante",
+  "email": "vanessa@email.com",
+  "observacao": "Aluno j apossui boa avaliação",
   "endereco": "Rua das Flores",
   "numero": "123",
   "complemento": "Apartamento 202",
@@ -86,3 +86,18 @@ Content-Type: application/json
   "email": "email-ivalido",
   "estado": "Santa Catarina"
 }
+
+### Listar todos
+GET {{baseUrl}}/alunos?page=0&size=10&sort=nome,asc
+
+### Listar por nome
+GET {{baseUrl}}/alunos?nome=joao&page=0&size=10&sort=nome,asc
+
+### Listar por cidade
+GET {{baseUrl}}/alunos?cidade=Criciuma&page=0&size=10&sort=nome,asc
+
+### Listar por estado
+GET {{baseUrl}}/alunos?estado=SC&page=0&size=10&sort=nome,asc
+
+### Listar por email
+GET {{baseUrl}}/alunos?email=mariaoliveira@email.com&page=0&size=10&sort=nome,asc
